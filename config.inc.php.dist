@@ -1,0 +1,6 @@
+<?php
+
+$config['client'] = '';
+$config['secret'] = '';
+$config['rublonApi'] = '';
+$config['callbackUrl'] = '?_action=plugin.rublon-callback';
