@@ -7,6 +7,7 @@ class rublon extends rcube_plugin {
 
     private $rcmail;
 
+    private $rcubeUrl;
 
     function init()
     {
@@ -16,7 +17,7 @@ class rublon extends rcube_plugin {
         $this->add_hook('send_page', array($this, 'rublon_check'));
         $this->add_hook('login_after', array($this, 'login_after'));
         $this->register_action('plugin.rublon-callback', array($this, 'rublon_callback'));
-
+        $this->rcubeUrl = $this->rcmail->config->get('rcubeUrl',$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']).'/?_action=plugin.rublon-callback';
     }
 
     function login_after($args) {
@@ -30,7 +31,7 @@ class rublon extends rcube_plugin {
 
         try {
             $url = $rublon->auth(
-                $this->rcmail->config->get('callbackUrl'),
+                $this->rcubeUrl,
                 $this->rcmail->user->data['username'], // App User ID
                 $this->rcmail->user->data['username']// User email
             );

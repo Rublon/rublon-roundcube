@@ -1,6 +1,7 @@
 {
   "name": "rublon/rublon-roundcube",
   "type": "roundcube-plugin",
+  "license": "BSD-3-Clause",
   "description": "Plugin for Rublon 2FA",
   "keywords": ["2 factor authentication", "2 step authentication", "2-Factor", "2-step verification", "2FA", "admin", "authentication", "login", "login approval", "login protection", "login verification", "mfa", "multi factor authentication", "password", "qr code", "security", "two step authentication", "two-factor", "two-factor authentication", "two-factor verification", "two-step verification"],
   "homepage": "https://github.com/Rublon/rublon-roundcube",
